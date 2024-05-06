@@ -326,6 +326,11 @@
     <a name="circuit" val="TOP"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="128.0"/>
+    <comp lib="0" loc="(100,2190)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="alu_result"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(100,520)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="current_pc"/>
@@ -340,7 +345,12 @@
       <a name="label" val="select_type"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="0" loc="(1080,820)" name="Tunnel">
+    <comp lib="0" loc="(110,1680)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="wb_addr"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(120,2230)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="clk"/>
     </comp>
@@ -647,13 +657,13 @@
       <a name="label" val="select_type"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="0" loc="(850,1390)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="clk"/>
-    </comp>
     <comp lib="2" loc="(1040,780)" name="Multiplexer">
       <a name="select" val="5"/>
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(150,1680)" name="Decoder">
+      <a name="facing" val="south"/>
+      <a name="select" val="5"/>
     </comp>
     <comp lib="2" loc="(780,1350)" name="Multiplexer">
       <a name="select" val="5"/>
@@ -662,7 +672,7 @@
     <comp lib="3" loc="(160,530)" name="Adder">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(1090,750)" name="Register">
+    <comp lib="4" loc="(1040,1680)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
@@ -670,9 +680,53 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(870,1320)" name="Register">
+    <comp lib="4" loc="(410,2130)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="width" val="5"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(410,2130)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(480,2080)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(480,2080)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(550,2030)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(620,1980)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(620,1980)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(690,1930)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(760,1880)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(830,1830)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(900,1780)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(970,1730)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
     </comp>
     <comp lib="8" loc="(115,110)" name="Text">
       <a name="font" val="SansSerif bold 28"/>
@@ -686,22 +740,67 @@
     <comp loc="(310,1250)" name="lui"/>
     <comp loc="(620,590)" name="li"/>
     <comp loc="(620,650)" name="lui"/>
+    <wire from="(100,2190)" to="(110,2190)"/>
     <wire from="(100,520)" to="(120,520)"/>
     <wire from="(1020,940)" to="(1020,960)"/>
-    <wire from="(1040,780)" to="(1090,780)"/>
-    <wire from="(1080,820)" to="(1090,820)"/>
+    <wire from="(1040,780)" to="(1200,780)"/>
+    <wire from="(110,1680)" to="(150,1680)"/>
+    <wire from="(110,1710)" to="(1040,1710)"/>
+    <wire from="(110,1710)" to="(110,1760)"/>
+    <wire from="(110,1760)" to="(110,1810)"/>
+    <wire from="(110,1760)" to="(970,1760)"/>
+    <wire from="(110,1810)" to="(110,1860)"/>
+    <wire from="(110,1810)" to="(900,1810)"/>
+    <wire from="(110,1860)" to="(110,1910)"/>
+    <wire from="(110,1860)" to="(830,1860)"/>
+    <wire from="(110,1910)" to="(110,1960)"/>
+    <wire from="(110,1910)" to="(760,1910)"/>
+    <wire from="(110,1960)" to="(110,2010)"/>
+    <wire from="(110,1960)" to="(690,1960)"/>
+    <wire from="(110,2010)" to="(110,2060)"/>
+    <wire from="(110,2010)" to="(620,2010)"/>
+    <wire from="(110,2060)" to="(110,2110)"/>
+    <wire from="(110,2060)" to="(550,2060)"/>
+    <wire from="(110,2110)" to="(110,2160)"/>
+    <wire from="(110,2110)" to="(480,2110)"/>
+    <wire from="(110,2160)" to="(110,2190)"/>
+    <wire from="(110,2160)" to="(410,2160)"/>
     <wire from="(110,540)" to="(110,550)"/>
     <wire from="(110,540)" to="(120,540)"/>
-    <wire from="(1150,780)" to="(1200,780)"/>
+    <wire from="(120,2230)" to="(130,2230)"/>
     <wire from="(120,560)" to="(120,580)"/>
     <wire from="(120,560)" to="(170,560)"/>
     <wire from="(120,870)" to="(140,870)"/>
     <wire from="(120,910)" to="(150,910)"/>
+    <wire from="(130,1750)" to="(1040,1750)"/>
+    <wire from="(130,1750)" to="(130,1800)"/>
+    <wire from="(130,1800)" to="(130,1850)"/>
+    <wire from="(130,1800)" to="(970,1800)"/>
+    <wire from="(130,1850)" to="(130,1900)"/>
+    <wire from="(130,1850)" to="(900,1850)"/>
+    <wire from="(130,1900)" to="(130,1950)"/>
+    <wire from="(130,1900)" to="(830,1900)"/>
+    <wire from="(130,1950)" to="(130,2000)"/>
+    <wire from="(130,1950)" to="(760,1950)"/>
+    <wire from="(130,2000)" to="(130,2050)"/>
+    <wire from="(130,2000)" to="(690,2000)"/>
+    <wire from="(130,2050)" to="(130,2100)"/>
+    <wire from="(130,2050)" to="(620,2050)"/>
+    <wire from="(130,2100)" to="(130,2150)"/>
+    <wire from="(130,2100)" to="(550,2100)"/>
+    <wire from="(130,2150)" to="(130,2200)"/>
+    <wire from="(130,2150)" to="(480,2150)"/>
+    <wire from="(130,2200)" to="(130,2230)"/>
+    <wire from="(130,2200)" to="(410,2200)"/>
     <wire from="(140,950)" to="(160,950)"/>
     <wire from="(140,990)" to="(160,990)"/>
+    <wire from="(150,1700)" to="(150,2180)"/>
+    <wire from="(150,2180)" to="(410,2180)"/>
     <wire from="(160,530)" to="(170,530)"/>
     <wire from="(160,870)" to="(240,870)"/>
     <wire from="(160,960)" to="(160,990)"/>
+    <wire from="(170,1700)" to="(170,2130)"/>
+    <wire from="(170,2130)" to="(480,2130)"/>
     <wire from="(170,520)" to="(170,530)"/>
     <wire from="(170,910)" to="(210,910)"/>
     <wire from="(180,960)" to="(200,960)"/>
@@ -712,12 +811,28 @@
     <wire from="(200,730)" to="(230,730)"/>
     <wire from="(200,780)" to="(230,780)"/>
     <wire from="(200,830)" to="(230,830)"/>
+    <wire from="(230,1700)" to="(230,2080)"/>
+    <wire from="(230,2080)" to="(550,2080)"/>
     <wire from="(230,520)" to="(240,520)"/>
+    <wire from="(240,1700)" to="(240,2030)"/>
+    <wire from="(240,2030)" to="(620,2030)"/>
+    <wire from="(250,1700)" to="(250,1980)"/>
+    <wire from="(250,1980)" to="(690,1980)"/>
+    <wire from="(260,1700)" to="(260,1930)"/>
+    <wire from="(260,1930)" to="(760,1930)"/>
+    <wire from="(270,1700)" to="(270,1880)"/>
+    <wire from="(270,1880)" to="(830,1880)"/>
     <wire from="(270,280)" to="(310,280)"/>
     <wire from="(270,310)" to="(310,310)"/>
+    <wire from="(280,1700)" to="(280,1830)"/>
+    <wire from="(280,1830)" to="(900,1830)"/>
     <wire from="(280,190)" to="(310,190)"/>
     <wire from="(280,220)" to="(310,220)"/>
     <wire from="(280,250)" to="(310,250)"/>
+    <wire from="(290,1700)" to="(290,1780)"/>
+    <wire from="(290,1780)" to="(970,1780)"/>
+    <wire from="(300,1700)" to="(300,1730)"/>
+    <wire from="(300,1730)" to="(1040,1730)"/>
     <wire from="(310,1210)" to="(560,1210)"/>
     <wire from="(310,1270)" to="(550,1270)"/>
     <wire from="(380,510)" to="(390,510)"/>
@@ -754,14 +869,12 @@
     <wire from="(70,1130)" to="(80,1130)"/>
     <wire from="(70,550)" to="(110,550)"/>
     <wire from="(760,1510)" to="(760,1590)"/>
-    <wire from="(780,1350)" to="(870,1350)"/>
+    <wire from="(780,1350)" to="(1020,1350)"/>
     <wire from="(80,1130)" to="(80,1190)"/>
     <wire from="(80,1190)" to="(80,1250)"/>
     <wire from="(80,1190)" to="(90,1190)"/>
     <wire from="(80,1250)" to="(90,1250)"/>
-    <wire from="(850,1390)" to="(870,1390)"/>
     <wire from="(900,80)" to="(900,480)"/>
-    <wire from="(930,1350)" to="(1020,1350)"/>
   </circuit>
   <circuit name="testbench">
     <a name="appearance" val="logisim_evolution"/>
@@ -870,7 +983,7 @@
       <a name="facing" val="west"/>
       <a name="label" val="wb_data"/>
       <a name="output" val="true"/>
-      <a name="radix" val="16"/>
+      <a name="radix" val="10unsigned"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(1150,910)" name="Tunnel">
@@ -1459,7 +1572,7 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="128.0"/>
     <comp lib="0" loc="(130,110)" name="Tunnel">
-      <a name="label" val="RS1_CI"/>
+      <a name="label" val="RD_CI"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(130,60)" name="Pin">
@@ -1493,7 +1606,7 @@
     </comp>
     <comp lib="0" loc="(430,210)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="RS1_CI"/>
+      <a name="label" val="RD_CI"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(460,210)" name="Pin">
