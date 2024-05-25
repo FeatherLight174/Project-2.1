@@ -1957,6 +1957,9 @@
     <comp lib="0" loc="(1080,740)" name="Tunnel">
       <a name="label" val="wb_en"/>
     </comp>
+    <comp lib="0" loc="(1090,790)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="0" loc="(1110,790)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -2329,7 +2332,7 @@
     <wire from="(1050,740)" to="(1060,740)"/>
     <wire from="(1060,740)" to="(1060,790)"/>
     <wire from="(1060,740)" to="(1080,740)"/>
-    <wire from="(1060,790)" to="(1110,790)"/>
+    <wire from="(1090,790)" to="(1110,790)"/>
     <wire from="(130,690)" to="(170,690)"/>
     <wire from="(150,620)" to="(180,620)"/>
     <wire from="(160,660)" to="(180,660)"/>
