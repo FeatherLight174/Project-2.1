@@ -336,6 +336,14 @@
       <a name="label" val="select_type"/>
       <a name="width" val="5"/>
     </comp>
+    <comp lib="0" loc="(1120,720)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(1120,750)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="rst"/>
+    </comp>
     <comp lib="0" loc="(1130,640)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="FUNC4"/>
@@ -422,7 +430,7 @@
       <a name="fanout" val="1"/>
       <a name="incoming" val="16"/>
     </comp>
-    <comp lib="0" loc="(1480,640)" name="Tunnel">
+    <comp lib="0" loc="(1460,640)" name="Tunnel">
       <a name="label" val="alu_result"/>
       <a name="width" val="32"/>
     </comp>
@@ -725,12 +733,14 @@
     <wire from="(100,1130)" to="(110,1130)"/>
     <wire from="(1020,980)" to="(1020,990)"/>
     <wire from="(1020,990)" to="(1020,1000)"/>
-    <wire from="(1020,990)" to="(1150,990)"/>
+    <wire from="(1020,990)" to="(1080,990)"/>
     <wire from="(1040,820)" to="(1060,820)"/>
     <wire from="(1060,640)" to="(1060,660)"/>
     <wire from="(1060,660)" to="(1150,660)"/>
     <wire from="(1060,680)" to="(1060,820)"/>
     <wire from="(1060,680)" to="(1150,680)"/>
+    <wire from="(1080,700)" to="(1080,990)"/>
+    <wire from="(1080,700)" to="(1150,700)"/>
     <wire from="(110,1010)" to="(110,1080)"/>
     <wire from="(110,1010)" to="(130,1010)"/>
     <wire from="(110,1080)" to="(110,1130)"/>
@@ -740,15 +750,17 @@
     <wire from="(110,1180)" to="(380,1180)"/>
     <wire from="(110,970)" to="(110,1010)"/>
     <wire from="(110,970)" to="(120,970)"/>
+    <wire from="(1120,720)" to="(1150,720)"/>
+    <wire from="(1120,750)" to="(1150,750)"/>
     <wire from="(1130,640)" to="(1150,640)"/>
-    <wire from="(1150,700)" to="(1150,990)"/>
+    <wire from="(1150,740)" to="(1150,750)"/>
     <wire from="(1370,640)" to="(1420,640)"/>
     <wire from="(140,1070)" to="(150,1070)"/>
     <wire from="(140,1080)" to="(150,1080)"/>
     <wire from="(140,1130)" to="(150,1130)"/>
     <wire from="(140,970)" to="(220,970)"/>
     <wire from="(1420,640)" to="(1420,1040)"/>
-    <wire from="(1420,640)" to="(1480,640)"/>
+    <wire from="(1420,640)" to="(1460,640)"/>
     <wire from="(150,1010)" to="(190,1010)"/>
     <wire from="(150,1130)" to="(150,1220)"/>
     <wire from="(150,1130)" to="(160,1130)"/>
@@ -1788,6 +1800,14 @@
     <a name="circuit" val="ALU"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="128.0"/>
+    <comp lib="0" loc="(150,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(150,260)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="rst"/>
+    </comp>
     <comp lib="0" loc="(150,600)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="rs2_imm_input"/>
@@ -1806,6 +1826,12 @@
       <a name="facing" val="east"/>
       <a name="label" val="rs2_imm_input"/>
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(200,220)" name="Tunnel">
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(200,260)" name="Tunnel">
+      <a name="label" val="rst"/>
     </comp>
     <comp lib="0" loc="(210,40)" name="Tunnel">
       <a name="label" val="FUNC4"/>
@@ -1889,7 +1915,15 @@
       <a name="radix" val="16"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(680,590)" name="Tunnel">
+    <comp lib="0" loc="(670,630)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(780,680)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="rst"/>
+    </comp>
+    <comp lib="0" loc="(860,590)" name="Tunnel">
       <a name="label" val="rd_value_o"/>
       <a name="width" val="32"/>
     </comp>
@@ -1909,6 +1943,12 @@
     <comp lib="3" loc="(440,590)" name="Shifter">
       <a name="width" val="32"/>
     </comp>
+    <comp lib="4" loc="(750,560)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(150,220)" to="(200,220)"/>
+    <wire from="(150,260)" to="(200,260)"/>
     <wire from="(150,600)" to="(180,600)"/>
     <wire from="(170,40)" to="(210,40)"/>
     <wire from="(190,180)" to="(230,180)"/>
@@ -1943,7 +1983,10 @@
     <wire from="(540,530)" to="(550,530)"/>
     <wire from="(570,750)" to="(570,850)"/>
     <wire from="(570,80)" to="(620,80)"/>
-    <wire from="(590,590)" to="(680,590)"/>
+    <wire from="(590,590)" to="(750,590)"/>
+    <wire from="(670,630)" to="(750,630)"/>
+    <wire from="(780,650)" to="(780,680)"/>
+    <wire from="(810,590)" to="(860,590)"/>
   </circuit>
   <circuit name="PC">
     <a name="appearance" val="logisim_evolution"/>
@@ -1954,13 +1997,13 @@
       <a name="label" val="control_pc"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(1080,740)" name="Tunnel">
+    <comp lib="0" loc="(1180,740)" name="Tunnel">
       <a name="label" val="wb_en"/>
     </comp>
-    <comp lib="0" loc="(1090,790)" name="Constant">
+    <comp lib="0" loc="(1230,800)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(1110,790)" name="Pin">
+    <comp lib="0" loc="(1260,800)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="control_en"/>
@@ -2329,10 +2372,8 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
-    <wire from="(1050,740)" to="(1060,740)"/>
-    <wire from="(1060,740)" to="(1060,790)"/>
-    <wire from="(1060,740)" to="(1080,740)"/>
-    <wire from="(1090,790)" to="(1110,790)"/>
+    <wire from="(1050,740)" to="(1180,740)"/>
+    <wire from="(1230,800)" to="(1260,800)"/>
     <wire from="(130,690)" to="(170,690)"/>
     <wire from="(150,620)" to="(180,620)"/>
     <wire from="(160,660)" to="(180,660)"/>
