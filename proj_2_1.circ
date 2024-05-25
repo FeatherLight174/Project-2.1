@@ -2294,7 +2294,6 @@
       <a name="label" val="offset_j"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="1" loc="(1100,790)" name="NOT Gate"/>
     <comp lib="2" loc="(270,610)" name="Multiplexer">
       <a name="width" val="32"/>
     </comp>
@@ -2330,8 +2329,7 @@
     <wire from="(1050,740)" to="(1060,740)"/>
     <wire from="(1060,740)" to="(1060,790)"/>
     <wire from="(1060,740)" to="(1080,740)"/>
-    <wire from="(1060,790)" to="(1070,790)"/>
-    <wire from="(1100,790)" to="(1110,790)"/>
+    <wire from="(1060,790)" to="(1110,790)"/>
     <wire from="(130,690)" to="(170,690)"/>
     <wire from="(150,620)" to="(180,620)"/>
     <wire from="(160,660)" to="(180,660)"/>
